@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diet and Workouts Recommendations</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        *{
+            font-family: sf pro display;
+        }
+
+        h1{
+            margin-bottom: 2vw;
+            font-size: 3vw;
+        }
+        #main{
+            height: inherit;
+            width: 80vw;
+            padding: 30px 25px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #ececec, #fdfdfd);
+            box-shadow: 30px 30px 50px #dcdcdc, -30px -30px 50px #ffffff;
+            transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+            margin-bottom: 30px;
+        }
+        .recbtn{
+            margin-top: 2vw;
+            margin-left: 30%;
+            background-color: rgb(190, 19, 19);
+            color: white;
+            background: linear-gradient(145deg, #e26a2c, #ff8243);
+            border: none;
+            box-shadow: 4px 4px 8px #9e9e9e, -4px -4px 8px #ffffff;
+            padding: 1vw 8vw;
+            border-radius: 40px;
+        }
+        .recbtn:hover{
+            opacity: 0.8;
+            transition: .6s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mycont mt-5" id="main">
+        <h1 class="text-center">Diet and Workouts Recommendations</h1>
+
+        <form action="/recommend" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control" id="age" name="age">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="weight">Weight</label>
+                        <input type="number" class="form-control" id="weight" name="weight">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="height">Height</label>
+                        <input type="number" class="form-control" id="height" name="height" step="0.01">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="veg_or_nonveg">Meal Preference</label>
+                        <select class="form-control" id="veg_or_nonveg" name="veg_or_nonveg">
+                            <option value="veg">Veg</option>
+                            <option value="nonveg">Non-Veg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="desired_body_type">Desired Body type</label>
+                        <input type="text" class="form-control" id="desired_body_type" name="desired_body_type">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="region">Region</label>
+                        <input type="text" class="form-control" id="region" name="region">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nutritional_aspiration">Nutritional Aspiration</label>
+                        <input type="text" class="form-control" id="nutritional_aspiration" name="nutritional_aspiration">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="foodtype">Food Type</label>
+                <input type="text" class="form-control" id="foodtype" name="foodtype">
+            </div>
+
+            <button type="submit" class="recbtn" >Recommend Diets</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
