@@ -6,7 +6,7 @@ from langchain.chains import LLMChain
 from langchain_openai import OpenAI
 from flask import Flask, render_template, redirect, url_for, request
 
-os.environ['OPENAI_API_KEY'] = 'sk-proj-l7gak13g0o8HT2zyhWYZT3BlbkFJgFuC6S2XVHEhNJSn3x4w'
+os.environ['OPENAI_API_KEY'] = ''
 app = Flask(__name__)
 
 llm_resto = OpenAI(temperature=0.6)
